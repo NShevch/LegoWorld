@@ -2,6 +2,6 @@
 mini online store (Angular, routing)
 
 
-npm i
+npm ci
 
 npm start
