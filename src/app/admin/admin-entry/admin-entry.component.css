@@ -1,0 +1,24 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.wrongPass {
+  color: red;
+  font-size: 25px;
+}
+.wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 200px;
+  margin: 50px 0;
+  font-size: 25px;
+}
+input {
+  font-size: 21px;
+  border: 2px solid black;
+  border-radius: 5px;
+}

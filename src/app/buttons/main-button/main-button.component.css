@@ -1,0 +1,17 @@
+.mainBtn {
+  font-size: 19px;
+  background-color: hsl(57deg 92% 58%);
+  border-radius: 5px;
+  padding: 3px 9px;
+  border: 2px solid black;
+  margin: 10px;
+  cursor: pointer;
+}
+.mainBtn:hover {
+  background-color: hsl(359deg 94% 42%);
+  color: white;
+}
+.mainBtn:active {
+  background-color: rgb(155, 4, 6);
+  box-shadow: inset 2px 2px black;
+}

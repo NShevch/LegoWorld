@@ -1,0 +1,36 @@
+<app-basket-icon></app-basket-icon>
+<app-main-button
+  (clickEvent)="goToMain()">
+  🡸 Back
+</app-main-button>
+<div class="productWrap"
+  *ngIf="product; else noProduct">
+  <img src="{{product.image}}">
+  <div class="infoWrap">
+    <div class="name"> {{product.name}} </div>
+    <div class="description"> {{product.description}} </div>
+    <div class="price"> 
+      <span [style.fontSize.px]="24">$</span>{{product.price}}  
+    </div>
+  </div>
+</div>  
+<div class="buyBtnWrap">
+    <app-main-button
+      [addedStyles]="{
+        fontSize: '25px', 
+        fontWeight: 'bold',
+        padding: '6px 20px'
+      }"
+      (clickEvent)="buy(product)">
+      Buy
+    </app-main-button>
+</div>
+
+<ng-template #noProduct>
+  <pre> 
+    No product chosen! 
+    Go back and try again!
+  </pre>
+</ng-template>
+
+<app-comments [product]="product"></app-comments>

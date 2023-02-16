@@ -1,0 +1,8 @@
+<div class="basket"
+  (click)="onBasketClick()">
+  <img [style.height.px]="30" src="/assets/images/basket.png">
+  <div class="numberOfProducts"
+    *ngIf="numberOfProducts"> 
+    {{numberOfProducts}} 
+  </div>
+</div>

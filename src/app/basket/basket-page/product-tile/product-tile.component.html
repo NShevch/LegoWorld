@@ -1,0 +1,20 @@
+<div class="productTile"
+  *ngFor="let product of products">
+  <img src="{{product.image}}">
+  <div class="productName"> {{product.name}} </div>
+  <span class="price"> ${{product.price}} per pc. </span>
+  <label [ngStyle]="{margin: '0 15px'}">
+    <input class="inputAmount" 
+      type="number" 
+      value="{{product.amount}}" 
+      (input)="onInput($event, product)"
+      (keydown)='false'
+      min="1">
+      pc.
+  </label>
+  <app-main-button 
+    [addedStyles]="{fontSize: '15px', margin: '0px 15px'}"
+    (clickEvent)="removeTile(product)"> 
+    Remove 
+  </app-main-button>
+</div>

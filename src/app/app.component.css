@@ -1,0 +1,45 @@
+@font-face {
+  font-family: "Lego";
+  src: url(../assets/fonts/SansitaOne.ttf);
+}
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70px;
+  background-color: hsl(359deg 94% 42%);
+  position: relative;
+  /* margin-bottom: 15px; */
+  box-shadow: 0px 3px 8px 0px black;
+}
+.shopName {
+  font-size: 60px;
+  color: white;
+  font-style: italic;
+  cursor: default;
+  text-shadow: 1px 3px 4px black, 
+              -4px -3px 0px black, 
+              -8px -5px 0px hsl(57deg 92% 58%);
+  font-variant: small-caps;
+  font-family: Lego;
+}
+.admin {
+  border-radius: 5px;
+  position: absolute;
+  right: 87px;
+  font-size: 22px;
+  border: 2px solid;
+  padding: 0px 12px;
+  padding-bottom: 3px;
+  cursor: pointer;
+  background-color: hsl(57deg 92% 58%);
+  font-style: italic;
+  font-variant: all-small-caps;
+}
+.admin:hover {
+  background-color: white;
+}
+.admin:active {
+  background-color: rgb(205, 205, 205);
+  box-shadow: inset 0px 0px 7px 2px #640000;
+}

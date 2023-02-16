@@ -1,0 +1,21 @@
+<div class="addComment">
+  <textarea #text
+  class="textArea"
+  placeholder="Write your comment..." ></textarea>
+  <app-main-button
+    [addedStyles]="{
+      marginLeft: '20px',
+      fontSize: '15px',
+      padding: '5px 12px'
+    }"
+    (clickEvent)="addComment(text)">
+    Add comment
+  </app-main-button>
+</div>
+<div class="comments"
+  *ngIf="comments.length">
+  <div class="commentsHeader"> Comments: </div>
+  <blockquote *ngFor="let item of comments">
+    {{item}} 
+  </blockquote>
+</div>

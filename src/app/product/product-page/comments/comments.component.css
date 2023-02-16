@@ -1,0 +1,32 @@
+.addComment {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 44px 0;
+}
+.textArea {
+  height: 101px;
+  width: 550px;
+  resize: none;
+  padding: 5px 11px;
+  box-sizing: border-box;
+  border: 2px solid black;
+  border-radius: 5px;
+}
+blockquote {
+  border: 1.5px solid black;
+  border-radius: 5px;
+  padding: 6px 13px;
+  font-style: italic;
+  font-family: sans-serif;
+  width: 70vw;
+  min-width: 500px;
+  white-space: pre-line;
+  overflow-wrap: break-word;
+}
+.commentsHeader {
+  font-size: 25px;
+}
+.comments {
+  padding: 30px;
+}

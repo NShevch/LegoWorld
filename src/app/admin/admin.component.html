@@ -1,0 +1,43 @@
+<div class="headerWrap">
+  <app-main-button
+    (clickEvent)="goToMain()">
+    🡸 Main Page
+  </app-main-button>
+  <div class="warn"
+    *ngIf="warn">
+    Incorrent input.
+    It is required that you fill all the fields.
+  </div>
+</div>
+
+<div class="infoWrap">
+  <label>
+    Name: 
+    <input #name type="text">
+  </label>
+  <div>
+    <div>Description: </div>
+    <textarea #description></textarea>
+  </div>
+  <label>
+    Image url: 
+    <input #image 
+      [ngStyle]="{width: '300px'}"
+      type="text">
+  </label>
+  <label>
+    Price: 
+    <input #price type="number" min="1">
+  </label>
+  <app-main-button
+    [addedStyles]="{padding: '7px 17px', margin: '38px'}"
+    (clickEvent)="addNewProduct({
+      name: name.value,
+      description: description.value,
+      image: image.value,
+      price: price.value
+    })">
+    Add new product
+  </app-main-button>
+  
+</div>

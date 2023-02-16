@@ -1,0 +1,29 @@
+<app-main-button (clickEvent)="goToMain()"> 🡸 Main Page </app-main-button>
+<div class="diplayProducts">
+  <app-product-tile
+    (removeTileEvent)="removeProduct($event)"
+    [products]="products"
+    *ngIf="products.length; else empty">
+  </app-product-tile>
+  <ng-template #empty>
+    <div [ngStyle]="{
+      margin: '15px',
+      fontSize: '25px'
+    }"> No products in basket! </div>
+  </ng-template>
+</div>
+
+<div class="wrapForbuyAndSum">
+  <div class="buyAndSum"
+    *ngIf="products.length">
+    <app-main-button 
+      [addedStyles]="{padding: '4px 20px', margin: '0'}" 
+      (clickEvent)="clearBasket()"> 
+      Buy 
+    </app-main-button>
+    <div class="total">
+      Total amount: <span class="sum">${{sum}} </span>
+    </div>
+  </div>
+</div>
+

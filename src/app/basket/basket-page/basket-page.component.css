@@ -1,0 +1,21 @@
+.diplayProducts {
+  display: flex;
+  justify-content: center;
+}
+.wrapForbuyAndSum {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+.buyAndSum {
+  display: flex;
+  justify-content: space-between;
+  width: 880px;
+}
+.total {
+  font-size: 20px;
+}
+.sum {
+  font-size: 25px;
+}
