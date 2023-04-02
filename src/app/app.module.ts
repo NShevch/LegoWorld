@@ -6,11 +6,11 @@ import { AppComponent } from './app.component';
 import { BasketModule } from './basket/basket.module';
 import { MainModule } from './main/main.module';
 import { ProductModule } from './product/product.module';
-import ProductsData from './services/products-data.service';
-import Basket from './services/basket.service';
+import ProductsData from './shared/services/products-data.service';
+import Basket from './shared/services/basket.service';
 import { AdminModule } from './admin/admin.module';
-import { ReactiveFormsModule } from '@angular/forms';
 import { DirectivesModule } from './shared/directives/directives.module';
+import { AuthGuard } from './admin/auth-guard.service';
 
 @NgModule({
   declarations: [
@@ -27,7 +27,8 @@ import { DirectivesModule } from './shared/directives/directives.module';
   ],
   providers: [
     ProductsData,
-    Basket
+    Basket,
+    // AuthGuard
   ],
   bootstrap: [AppComponent]
 })

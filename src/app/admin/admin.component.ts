@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import ProductsData from '../services/products-data.service';
+import ProductsData from '../shared/services/products-data.service';
 
 @Component({
   selector: 'app-admin',
@@ -48,8 +48,8 @@ export class AdminComponent implements OnInit {
         this.warn = false;
       }, 2000);
     }
-    
   }
+
   goToMain() {
     this.router.navigate(["/main"]);
   }

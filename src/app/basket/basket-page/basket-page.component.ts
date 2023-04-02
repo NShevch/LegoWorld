@@ -1,6 +1,6 @@
 import { Component, OnInit, DoCheck } from '@angular/core';
 import { Router } from '@angular/router';
-import Basket from 'src/app/services/basket.service';
+import Basket from 'src/app/shared/services/basket.service';
 
 @Component({
   selector: 'app-basket-page',
@@ -29,18 +29,18 @@ export class BasketPageComponent implements OnInit {
         result += product.price * product.amount;
       } else {
         result += product.price;
-      }      
+      }
     });
     this.sum = result;
   }
   removeProduct(product: Product) {
     this.basket.removeProduct(product);
-  }  
+  }
   clearBasket() {
     this.basket.clear();
   }
   goToMain() {
     this.router.navigate(["/main"]);
   }
-  
+
 }

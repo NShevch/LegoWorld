@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import LocalStorage from 'src/app/services/local-storage.service';
+import LocalStorage from 'src/app/shared/services/local-storage.service';
 
 @Component({
   selector: 'app-comments',
@@ -27,6 +27,6 @@ export class CommentsComponent implements OnInit {
         textArea.placeholder = "Write your comment...";
       }, 2000);
     }
-    
+
   }
 }

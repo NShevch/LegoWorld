@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import ProductsData from 'src/app/services/products-data.service';
+import ProductsData from 'src/app/shared/services/products-data.service';
 import { ActivatedRoute } from '@angular/router';
 import { Router } from '@angular/router';
-import Basket from 'src/app/services/basket.service';
+import Basket from 'src/app/shared/services/basket.service';
 
 @Component({
   selector: 'app-product-page',

@@ -5,6 +5,8 @@ import { AdminEntryComponent } from './admin-entry/admin-entry.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ButtonsModule } from '../buttons/buttons.module';
 import { DirectivesModule } from '../shared/directives/directives.module';
+import { AuthService } from './auth.service';
+import { AuthGuard } from './auth-guard.service';
 
 
 
@@ -19,6 +21,10 @@ import { DirectivesModule } from '../shared/directives/directives.module';
     ReactiveFormsModule,
     ButtonsModule,
     DirectivesModule
+  ],
+  providers: [
+    AuthService,
+    AuthGuard
   ]
 })
 export class AdminModule { }

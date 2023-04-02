@@ -1,5 +1,5 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
-import ProductsData from 'src/app/services/products-data.service';
+import ProductsData from 'src/app/shared/services/products-data.service';
 
 @Component({
   selector: 'app-filter',

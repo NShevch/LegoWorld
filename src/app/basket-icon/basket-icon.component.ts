@@ -1,6 +1,6 @@
 import { Component, OnInit, DoCheck } from '@angular/core';
 import { Router } from '@angular/router';
-import Basket from '../services/basket.service';
+import Basket from '../shared/services/basket.service';
 
 @Component({
   selector: 'app-basket-icon',
@@ -16,10 +16,10 @@ export class BasketIconComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {}
-  
+
   ngDoCheck() {
     this.numberOfProducts = this.basket.getAmountOfProducts();
-  } 
+  }
   onBasketClick() {
     this.router.navigate(["/basket"]);
   }
