@@ -17,8 +17,8 @@ header {
   color: white;
   font-style: italic;
   cursor: default;
-  text-shadow: 1px 3px 4px black, 
-              -4px -3px 0px black, 
+  text-shadow: 1px 3px 4px black,
+              -4px -3px 0px black,
               -8px -5px 0px hsl(57deg 92% 58%);
   font-variant: small-caps;
   font-family: Lego;

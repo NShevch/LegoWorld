@@ -12,6 +12,6 @@
   color: white;
 }
 .mainBtn:active {
-  background-color: rgb(155, 4, 6);
+  background-color: hsl(359, 95%, 31%);
   box-shadow: inset 2px 2px black;
 }

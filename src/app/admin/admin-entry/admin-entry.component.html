@@ -1,20 +1,23 @@
-<div class="wrap">
+<form
+  (ngSubmit)="onSubmitClick(password.value)"
+  class="wrap">
   <div> Enter password: </div>
   <input #password
     placeholder="1111"
     type="text" required>
-  <app-main-button
-    [addedStyles]="{padding: '4px 20px', margin: '0'}"
-    (clickEvent)="onSubmitClick(password.value)"> 
-    Submit 
-  </app-main-button>
-  <app-main-button
-    [addedStyles]="{padding: '4px 20px', margin: '0'}"
-    (clickEvent)="onExitClick()"> 
-    Exit 
-  </app-main-button>
-</div>
+  <button
+    type="submit"
+    appButtonStyles
+    padding="4px 20px"
+    margin="0">Submit</button>
+  <button
+    type="button"
+    appButtonStyles
+    padding="4px 20px"
+    margin="0"
+    (click)="onExitClick()">Exit</button>
+</form>
 <span class="wrongPass"
-  *ngIf="wrongPassword"> 
-  Wrong password! 
+  *ngIf="wrongPassword">
+  Wrong password!
 </span>

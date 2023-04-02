@@ -17,6 +17,7 @@ export class AdminEntryComponent implements OnInit {
   onExitClick() {
     this.router.navigate(["/main"]);
   }
+
   onSubmitClick(password: string) {
     if (password === "1111") {
       this.wrongPassword = false;
@@ -27,6 +28,6 @@ export class AdminEntryComponent implements OnInit {
         this.wrongPassword = false;
       }, 1000);
     }
-    
+
   }
 }
