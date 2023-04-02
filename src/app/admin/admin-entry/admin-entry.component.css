@@ -13,7 +13,7 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  height: 200px;
+  min-height: 200px;
   margin: 50px 0;
   font-size: 25px;
 }
@@ -21,4 +21,10 @@ input {
   font-size: 21px;
   border: 2px solid black;
   border-radius: 5px;
+}
+input.ng-invalid.ng-touched {
+  border: 2px solid red;
+}
+button:disabled {
+  background-color: grey!important;
 }

@@ -10,7 +10,6 @@ import ProductsData from './services/products-data.service';
 import Basket from './services/basket.service';
 import { AdminModule } from './admin/admin.module';
 import { ReactiveFormsModule } from '@angular/forms';
-import { ButtonStylesDirective } from './shared/directives/button-styles.directive';
 import { DirectivesModule } from './shared/directives/directives.module';
 
 @NgModule({
@@ -24,7 +23,6 @@ import { DirectivesModule } from './shared/directives/directives.module';
     BasketModule,
     ProductModule,
     AdminModule,
-    ReactiveFormsModule,
     DirectivesModule
   ],
   providers: [
