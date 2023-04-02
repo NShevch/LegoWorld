@@ -16,10 +16,10 @@
 <div class="wrapForbuyAndSum">
   <div class="buyAndSum"
     *ngIf="products.length">
-    <app-main-button 
-      [addedStyles]="{padding: '4px 20px', margin: '0'}" 
-      (clickEvent)="clearBasket()"> 
-      Buy 
+    <app-main-button
+      [addedStyles]="{padding: '4px 20px', margin: '0'}"
+      (clickEvent)="clearBasket()">
+      Buy
     </app-main-button>
     <div class="total">
       Total amount: <span class="sum">${{sum}} </span>

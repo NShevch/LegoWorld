@@ -4,20 +4,21 @@ import { AdminComponent } from './admin.component';
 import { AdminEntryComponent } from './admin-entry/admin-entry.component';
 import { FormsModule } from '@angular/forms';
 import { ButtonsModule } from '../buttons/buttons.module';
-import { ButtonStylesDirective } from '../shared/button-styles.directive';
+import { ButtonStylesDirective } from '../shared/directives/button-styles.directive';
+import { DirectivesModule } from '../shared/directives/directives.module';
 
 
 
 @NgModule({
   declarations: [
     AdminComponent,
-    AdminEntryComponent,
-    ButtonStylesDirective
+    AdminEntryComponent
   ],
   imports: [
     CommonModule,
     FormsModule,
-    ButtonsModule
+    ButtonsModule,
+    DirectivesModule
   ]
 })
 export class AdminModule { }
