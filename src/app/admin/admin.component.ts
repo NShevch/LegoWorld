@@ -1,20 +1,22 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import ProductsData from '../shared/services/products-data.service';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { AuthService } from './auth.service';
 
 @Component({
   selector: 'app-admin',
   templateUrl: './admin.component.html',
   styleUrls: ['./admin.component.css']
 })
-export class AdminComponent implements OnInit {
+export class AdminComponent implements OnInit, OnDestroy {
   form!: FormGroup;
   imageURL!: string;
 
   constructor(
     private router: Router,
-    private products: ProductsData
+    private products: ProductsData,
+    private authService: AuthService,
   ) { }
 
   ngOnInit(): void {
@@ -50,5 +52,9 @@ export class AdminComponent implements OnInit {
 
   goToMain() {
     this.router.navigate(["/main"]);
+  }
+
+  ngOnDestroy(): void {
+    this.authService.logOut();
   }
 }
