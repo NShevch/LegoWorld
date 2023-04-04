@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { AuthService } from '../auth.service';
@@ -8,19 +8,24 @@ import { AuthService } from '../auth.service';
   templateUrl: './admin-entry.component.html',
   styleUrls: ['./admin-entry.component.css']
 })
-export class AdminEntryComponent implements OnInit {
+export class AdminEntryComponent implements OnInit, AfterViewInit {
+  @ViewChild('password') password!: ElementRef;
   wrongPassword: boolean = false;
   form!: FormGroup;
 
   constructor(
     private router: Router,
-    private authService: AuthService,
+    private authService: AuthService
   ) { }
 
   ngOnInit(): void {
     this.form = new FormGroup({
       password: new FormControl(null, Validators.required)
     });
+  }
+
+  ngAfterViewInit(): void {
+    this.password.nativeElement.focus();
   }
 
   onExitClick() {

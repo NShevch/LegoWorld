@@ -1,43 +1,61 @@
 <div class="headerWrap">
-  <app-main-button
-    (clickEvent)="goToMain()">
-    🡸 Main Page
-  </app-main-button>
-  <div class="warn"
-    *ngIf="warn">
-    Incorrent input.
-    It is required that you fill all the fields.
-  </div>
+  <button
+    appButtonStyles
+    (click)="goToMain()">🡸 Main Page</button>
 </div>
 
-<div class="infoWrap">
+<form
+  [formGroup]="form"
+  (ngSubmit)="addNewProduct()"
+  class="infoWrap">
   <label>
-    Name: 
-    <input #name type="text">
+    Name:
+    <input #name type="text" formControlName="name">
   </label>
+  <span class="warn"
+    *ngIf="!form.get('name')?.valid && form.get('name')?.touched">
+    Name is required
+  </span>
   <div>
     <div>Description: </div>
-    <textarea #description></textarea>
+    <textarea #description
+      formControlName="description"
+      rows="10"
+      cols="50"></textarea>
   </div>
+  <span class="warn"
+    *ngIf="!form.get('description')?.valid && form.get('description')?.touched">
+    Desciption is required
+  </span>
   <label>
-    Image url: 
-    <input #image 
-      [ngStyle]="{width: '300px'}"
-      type="text">
+    Image:
+    <input #image
+      formControlName="image"
+      type="file"
+      accept="image/*"
+      (change)="onImageChange($event)">
   </label>
+  <span class="warn"
+    *ngIf="!form.get('image')?.valid && form.get('image')?.touched">
+    Image is required
+  </span>
+  <img
+    class="image-prescreening"
+    [src]="imageURL"
+    alt="photo"
+    *ngIf="imageURL && imageURL !== ''">
   <label>
-    Price: 
-    <input #price type="number" min="1">
+    Price:
+    <input formControlName="price" #price type="number">
   </label>
-  <app-main-button
-    [addedStyles]="{padding: '7px 17px', margin: '38px'}"
-    (clickEvent)="addNewProduct({
-      name: name.value,
-      description: description.value,
-      image: image.value,
-      price: price.value
-    })">
-    Add new product
-  </app-main-button>
-  
-</div>
+  <span class="warn"
+    *ngIf="!form.get('price')?.valid && form.get('price')?.touched">
+    Price is required
+  </span>
+  <button
+    appButtonStyles
+    type="submit"
+    padding="7px 17px"
+    margin="38px"
+    [disabled]="!form.valid">Add new product</button>
+</form>

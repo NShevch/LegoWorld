@@ -11,10 +11,13 @@
 }
 .warn {
   color: rgb(208, 6, 10);
-  font-size: 25px;
+  font-size: 15px;
+  position: relative;
+  top: -5px;
+  /* left: -35px; */
   /* margin-left: 150px; */
-  width: calc(100vw - 261px);
-  text-align: center;
+  /* width: calc(100vw - 261px);
+  text-align: center; */
 }
 input {
   margin: 10px;
@@ -36,9 +39,27 @@ input {
 textarea {
   border: 2px solid black;
   border-radius: 5px;
-  resize: none;
-  height: 300px;
-  width: 500px;
+  /* resize: none; */
+  /* height: 300px;
+  width: 500px; */
   padding: 5px 10px;
   font-size: 17px;
+}
+
+.image-prescreening{
+  height: 128px;
+  width: 241px;
+  object-fit: contain;
+  border: 2px solid black;
+  border-radius: 5px;
+}
+
+textarea.ng-touched.ng-invalid,
+input.ng-touched.ng-invalid {
+  border: 2px solid red;
+}
+
+button:disabled {
+  background-color: grey!important;
+  color: white!important;
 }

@@ -13,7 +13,7 @@ const routes: Routes = [
   { path: "basket", component: BasketPageComponent},
   { path: "product/:name", component: ProductPageComponent},
   { path: "admin", component: AdminEntryComponent},
-  { path: "adminPage", component: AdminComponent, canActivate: [AuthGuard]},
+  { path: "adminPage", component: AdminComponent/* , canActivate: [AuthGuard] */},
   { path: "**", redirectTo: "main"},
 ];
 
