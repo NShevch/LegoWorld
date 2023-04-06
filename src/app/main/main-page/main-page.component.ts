@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import ProductsData from 'src/app/shared/services/products-data.service';
 
 @Component({
   selector: 'app-main-page',
@@ -6,16 +7,20 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./main-page.component.css']
 })
 export class MainPageComponent implements OnInit {
-  @Input() products!: Product[];
-  
-  constructor() {}
+  products!: Product[];
+  productName: string = '';
+
+  constructor(
+    private productsData: ProductsData
+  ) {}
 
   ngOnInit(): void {
+    this.products = this.productsData.get();
   }
 
-  getFilteredProducts(products: Product[]) {
-    this.products = products;
-  }
-  
+  // getFilteredProducts(products: Product[]) {
+  //   this.products = products;
+  // }
+
 
 }

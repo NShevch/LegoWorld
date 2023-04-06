@@ -1,4 +1,3 @@
-<app-basket-icon></app-basket-icon>
 <app-main-button
   (clickEvent)="goToMain()">
   🡸 Back
@@ -9,15 +8,15 @@
   <div class="infoWrap">
     <div class="name"> {{product.name}} </div>
     <div class="description"> {{product.description}} </div>
-    <div class="price"> 
-      <span [style.fontSize.px]="24">$</span>{{product.price}}  
+    <div class="price">
+      <span [style.fontSize.px]="24">$</span>{{product.price}}
     </div>
   </div>
-</div>  
+</div>
 <div class="buyBtnWrap">
     <app-main-button
       [addedStyles]="{
-        fontSize: '25px', 
+        fontSize: '25px',
         fontWeight: 'bold',
         padding: '6px 20px'
       }"
@@ -27,8 +26,8 @@
 </div>
 
 <ng-template #noProduct>
-  <pre> 
-    No product chosen! 
+  <pre>
+    No product chosen!
     Go back and try again!
   </pre>
 </ng-template>

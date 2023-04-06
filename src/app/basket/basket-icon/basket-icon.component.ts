@@ -1,6 +1,6 @@
 import { Component, OnInit, DoCheck } from '@angular/core';
 import { Router } from '@angular/router';
-import Basket from '../shared/services/basket.service';
+import Basket from '../../shared/services/basket.service';
 
 @Component({
   selector: 'app-basket-icon',

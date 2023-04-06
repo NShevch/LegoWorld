@@ -10,7 +10,6 @@ import ProductsData from './shared/services/products-data.service';
 import Basket from './shared/services/basket.service';
 import { AdminModule } from './admin/admin.module';
 import { DirectivesModule } from './shared/directives/directives.module';
-import { AuthGuard } from './admin/auth-guard.service';
 
 @NgModule({
   declarations: [
@@ -27,8 +26,7 @@ import { AuthGuard } from './admin/auth-guard.service';
   ],
   providers: [
     ProductsData,
-    Basket,
-    // AuthGuard
+    Basket
   ],
   bootstrap: [AppComponent]
 })

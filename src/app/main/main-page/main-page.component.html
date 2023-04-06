@@ -1,7 +1,13 @@
-<app-filter
-  (inputEvent)="getFilteredProducts($event)">
-</app-filter>
-<app-product
-  [products]="products">
-</app-product>
-<app-basket-icon></app-basket-icon>
+<div class="filterWrap">
+  <label for="filter"> Filter: </label>
+  <input class="filter"
+    id="filter"
+    type="text"
+    [(ngModel)]="productName">
+</div>
+<div class="products-wrap">
+  <app-product
+    *ngFor="let product of products | filter: productName: 'name'"
+    [product]="product">
+  </app-product>
+</div>
